@@ -64,3 +64,38 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# Tasks for Today Management System
+
+A Laravel-based task management system with authentication, full CRUD operations, validation, soft deletion, and email notifications.
+
+## Features
+
+- User registration and login using Laravel Breeze
+- Create tasks
+- View active tasks
+- Edit and update tasks
+- Mark tasks as pending or done
+- Archive tasks using soft deletion
+- Validation for task forms
+- Email notification when a pending task is marked as done
+- About page
+- User-specific task protection
+
+## Technologies Used
+
+- Laravel 12
+- PHP 8.2
+- SQLite
+- Blade
+- Tailwind CSS
+- Laravel Breeze
+- Git and GitHub
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Eminapascual-03/PASCUAL-TC37-TSA4-IT0049.git
