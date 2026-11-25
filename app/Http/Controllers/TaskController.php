@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TaskCompleted;
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class TaskController extends Controller
 {
@@ -58,7 +60,14 @@ class TaskController extends Controller
             'status' => ['required', 'in:pending,done'],
         ]);
 
+        $oldStatus = $task->status;
+
         $task->update($validated);
+
+        if ($oldStatus === 'pending' && $task->status === 'done') {
+            Mail::to(config('mail.task_recipient'))
+                ->send(new TaskCompleted($task));
+        }
 
         return redirect()
             ->route('tasks.index')

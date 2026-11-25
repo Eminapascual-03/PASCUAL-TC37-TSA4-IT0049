@@ -15,6 +15,7 @@ return [
     */
 
     'default' => env('MAIL_MAILER', 'log'),
+    'task_recipient' => env('MAIL_TASK_RECIPIENT', 'test@example.com'),
 
     /*
     |--------------------------------------------------------------------------
